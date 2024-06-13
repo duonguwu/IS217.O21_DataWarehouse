@@ -1,0 +1,221 @@
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="6fe98b5b-92c8-4c9d-9498-489604b902f8" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Tech Layoffs WH</ID>
+  <Name>Tech Layoffs WH</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+      <Value>_ALL_TABLES_</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+      <Value></Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+      <Value>
+        <Layouts xmlns="">
+          <Diagram>
+            <Name>_ALL_TABLES_</Name>
+            <DiagramLayout />
+            <ShowRelationshipNames>False</ShowRelationshipNames>
+            <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+            <DiagramViewPortLeft>0</DiagramViewPortLeft>
+            <DiagramViewPortTop>0</DiagramViewPortTop>
+            <DiagramBoundingLeft>0</DiagramBoundingLeft>
+            <DiagramBoundingTop>0</DiagramBoundingTop>
+            <DiagramZoom>100</DiagramZoom>
+          </Diagram>
+        </Layouts>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <DataSourceID>Tech Layoffs WH</DataSourceID>
+  <Schema>
+    <xs:schema id="Tech_x0020_Layoffs_x0020_WH" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+      <xs:element name="Tech_x0020_Layoffs_x0020_WH" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="fa1cc500-9941-4bd7-80b0-922eda9835a9">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="dbo_Fact" msprop:DbTableName="Fact" msprop:FriendlyName="Fact" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:design-time-name="3fb34a70-be72-4f15-b8cd-690ebc966280">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Layoff_ID" msprop:FriendlyName="Layoff_ID" msprop:DbColumnName="Layoff_ID" msprop:design-time-name="6f4822eb-8718-4e40-aa21-d3717e8a3fae" type="xs:int" />
+                  <xs:element name="Location_Id" msprop:FriendlyName="Location_Id" msprop:DbColumnName="Location_Id" msprop:design-time-name="f3dcf27d-7a14-4106-9161-f7dba38426ed" type="xs:int" minOccurs="0" />
+                  <xs:element name="Laid_Off" msprop:FriendlyName="Laid_Off" msprop:DbColumnName="Laid_Off" msprop:design-time-name="2a56e856-2a95-47b1-8aa0-28e2efee188d" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Date_layoffs" msprop:FriendlyName="Date_layoffs" msprop:DbColumnName="Date_layoffs" msprop:design-time-name="3ec05959-6c9d-47e7-a060-6df913601fb0" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="Percentage" msprop:FriendlyName="Percentage" msprop:DbColumnName="Percentage" msprop:design-time-name="123b1e9c-5e55-43e7-a7b9-4ad6a4db0565" type="xs:double" minOccurs="0" />
+                  <xs:element name="Company_Size_before_Layoffs" msprop:FriendlyName="Company_Size_before_Layoffs" msprop:DbColumnName="Company_Size_before_Layoffs" msprop:design-time-name="98aae8d6-3457-4acf-a425-04931fc22167" type="xs:int" minOccurs="0" />
+                  <xs:element name="Company_Size_after_layoffs" msprop:FriendlyName="Company_Size_after_layoffs" msprop:DbColumnName="Company_Size_after_layoffs" msprop:design-time-name="7173e355-61ff-4e41-beec-38720fc1a289" type="xs:int" minOccurs="0" />
+                  <xs:element name="Industry_id" msprop:FriendlyName="Industry_id" msprop:DbColumnName="Industry_id" msprop:design-time-name="a8cbd1aa-1860-4810-afff-fc3f32c8d461" type="xs:int" minOccurs="0" />
+                  <xs:element name="Stage_id" msprop:FriendlyName="Stage_id" msprop:DbColumnName="Stage_id" msprop:design-time-name="731d2798-eda2-4c07-905e-3bbdbe031954" type="xs:int" minOccurs="0" />
+                  <xs:element name="Money_Raised_in__x0024__mil" msprop:FriendlyName="Money_Raised_in_$_mil" msprop:DbColumnName="Money_Raised_in_$_mil" msprop:design-time-name="06f3c3b4-6f2e-4b7a-996f-adfb6ab5a817" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Company_id" msprop:FriendlyName="Company_id" msprop:DbColumnName="Company_id" msprop:design-time-name="a3959dd2-f99c-47e4-bbc0-be8cb2f66192" type="xs:int" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Dim_Stages" msprop:DbTableName="Dim_Stages" msprop:FriendlyName="Dim_Stages" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:design-time-name="55899ecd-a0c9-44fe-bc6e-b5600aaa7bb3">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Stage_id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:FriendlyName="Stage_id" msprop:DbColumnName="Stage_id" msprop:design-time-name="d784c92b-2d7f-41d5-8670-65089214b50b" type="xs:int" />
+                  <xs:element name="Stage" msprop:FriendlyName="Stage" msprop:DbColumnName="Stage" msprop:design-time-name="648c2c36-bfdd-420a-8d79-dc2b348b8415" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Dim_Industries" msprop:DbTableName="Dim_Industries" msprop:FriendlyName="Dim_Industries" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:design-time-name="31757c68-d267-4f30-8949-b2c7ccedbbaf">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Industry_id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:FriendlyName="Industry_id" msprop:DbColumnName="Industry_id" msprop:design-time-name="65e91020-7175-4e3c-b0ce-b21cf22305f8" type="xs:int" />
+                  <xs:element name="Industry" msprop:FriendlyName="Industry" msprop:DbColumnName="Industry" msprop:design-time-name="2176e6e7-5d9b-4913-92a2-2e63c52f8b43" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Dim_Location" msprop:DbTableName="Dim_Location" msprop:FriendlyName="Dim_Location" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:design-time-name="df4ed9a6-8527-4466-a381-9d493ab4d945">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Location_Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:FriendlyName="Location_Id" msprop:DbColumnName="Location_Id" msprop:design-time-name="f4e752e6-f257-481b-9ae9-bfb6950c4d34" type="xs:int" />
+                  <xs:element name="Location_HQ" msprop:FriendlyName="Location_HQ" msprop:DbColumnName="Location_HQ" msprop:design-time-name="7fb3cae6-0564-4392-bd47-2ff2f680bcbe" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Country" msprop:FriendlyName="Country" msprop:DbColumnName="Country" msprop:design-time-name="f7f663e7-778b-4ebb-85c8-bdcc455bb37f" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Continent" msprop:FriendlyName="Continent" msprop:DbColumnName="Continent" msprop:design-time-name="f0f52fa0-3211-4885-8e37-d24144ac2a35" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Dim_Company" msprop:DbTableName="Dim_Company" msprop:FriendlyName="Dim_Company" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:design-time-name="8820c6dd-0698-46c4-b25c-6e73ab8f7f55">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Company_Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:FriendlyName="Company_Id" msprop:DbColumnName="Company_Id" msprop:design-time-name="8e611f73-8398-40fc-af12-79878dc3c0b9" type="xs:int" />
+                  <xs:element name="Company" msprop:FriendlyName="Company" msprop:DbColumnName="Company" msprop:design-time-name="84909aa3-8119-4d0b-ba1c-94dfb4f556a0" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="email" msprop:FriendlyName="email" msprop:DbColumnName="email" msprop:design-time-name="1a6814cf-ae1f-4ce1-b520-94fd0ad30bb3" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="website" msprop:FriendlyName="website" msprop:DbColumnName="website" msprop:design-time-name="016f4313-7d57-4d96-b080-0b2d648fd38f" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Dim_Dates" msprop:DbTableName="Dim_Dates" msprop:FriendlyName="Dim_Dates" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:design-time-name="f0a367a7-d2ee-4594-8979-3eafa844b672">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Date_layoffs_Id" msprop:FriendlyName="Date_layoffs_Id" msprop:DbColumnName="Date_layoffs_Id" msprop:design-time-name="877e4bc3-7d1c-4bcd-9c7d-ce180cc75845" type="xs:dateTime" />
+                  <xs:element name="Day" msprop:FriendlyName="Day" msprop:DbColumnName="Day" msprop:design-time-name="70a3f0b7-c553-495f-b12e-291fa77052a1" type="xs:int" minOccurs="0" />
+                  <xs:element name="Month" msprop:FriendlyName="Month" msprop:DbColumnName="Month" msprop:design-time-name="52629cc8-6b5b-4425-bba0-ec88e808f39a" type="xs:int" minOccurs="0" />
+                  <xs:element name="Year" msprop:FriendlyName="Year" msprop:DbColumnName="Year" msprop:design-time-name="0e492059-ac3a-48f3-abe3-3ff4bfc2c210" type="xs:int" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+        <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Fact" />
+          <xs:field xpath="Layoff_ID" />
+        </xs:unique>
+        <xs:unique name="dbo_Dim_Stages_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Dim_Stages" />
+          <xs:field xpath="Stage_id" />
+        </xs:unique>
+        <xs:unique name="dbo_Dim_Industries_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Dim_Industries" />
+          <xs:field xpath="Industry_id" />
+        </xs:unique>
+        <xs:unique name="dbo_Dim_Location_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Dim_Location" />
+          <xs:field xpath="Location_Id" />
+        </xs:unique>
+        <xs:unique name="dbo_Dim_Company_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Dim_Company" />
+          <xs:field xpath="Company_Id" />
+        </xs:unique>
+        <xs:unique name="dbo_Dim_Dates_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Dim_Dates" />
+          <xs:field xpath="Date_layoffs_Id" />
+        </xs:unique>
+        <xs:keyref name="FK_FACT_DIM_LOCATION" refer="dbo_Dim_Location_Constraint1">
+          <xs:selector xpath=".//dbo_Fact" />
+          <xs:field xpath="Location_Id" />
+        </xs:keyref>
+        <xs:keyref name="FK_FACT_DIM_DATES" refer="dbo_Dim_Dates_Constraint1">
+          <xs:selector xpath=".//dbo_Fact" />
+          <xs:field xpath="Date_layoffs" />
+        </xs:keyref>
+        <xs:keyref name="FK_FACT_DIM_INDUSTRIES" refer="dbo_Dim_Industries_Constraint1">
+          <xs:selector xpath=".//dbo_Fact" />
+          <xs:field xpath="Industry_id" />
+        </xs:keyref>
+        <xs:keyref name="FK_FACT_DIM_STAGES" refer="dbo_Dim_Stages_Constraint1">
+          <xs:selector xpath=".//dbo_Fact" />
+          <xs:field xpath="Stage_id" />
+        </xs:keyref>
+        <xs:keyref name="FK_FACT_DIM_COMPANY" refer="dbo_Dim_Company_Constraint1">
+          <xs:selector xpath=".//dbo_Fact" />
+          <xs:field xpath="Company_id" />
+        </xs:keyref>
+      </xs:element>
+    </xs:schema>
+    <Tech_x0020_Layoffs_x0020_WH xmlns="" />
+  </Schema>
+</DataSourceView>
