@@ -4,7 +4,7 @@
   </a>
 </p>
 
-<h1 align="center"><b>Phân tích dữ liệu kinh doanh - IS403.O21 - UIT</b></h1>
+<h1 align="center"><b>Kho dữ liệu và OLAP - IS217.O21 - UIT</b></h1>
 
 ## Giới thiệu môn
 -    **Tên môn học:** Kho dữ liệu và OLAP
